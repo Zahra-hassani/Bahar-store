@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import url("Arial Black.ttf");
+
+@theme{
+    --bgcolor-transparent-white: rbga(255,255,255,0.7);
+    --font-arial: "Arial Black";
+    --text-shadow-full:0 0 2px,0 0 2px,0 0 2px,0 0 2px;
+    --animate-bg-change: back 4s 1 linear;
+    @keyframes back{
+        0%{
+            background-position: left;
+        }
+        100%{
+            background-position: right;
+        }
+    } 
+    --animate-move: move 2s 1 ;
+    @keyframes move{
+        0%{
+            right: -56px;
+        }
+        100%{
+            right: 0;
+        }
+    }
+}
