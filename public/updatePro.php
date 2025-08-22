@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
 <body class="h-screen w-full flex justify-center items-center bg-linear-180 from-sky-500 to-gray-300 from-50% to-50%">
     <div class="h-[55%] w-[53%] flex justify-between items-center rounded shadow-lg shadow-gray-400">
         <form method="post" action=<?php echo $_SERVER["PHP_SELF"] ?> class="h-full w-[50%] bg-gray-100 flex flex-col gap-3 p-3 rounded shadow-md mx-auto">
-            <h1 class="text-2xl font-extrabold text-center font-sans py-4">Product Registration</h1>
+            <h1 class="text-2xl font-extrabold text-center font-sans py-4">Update Product</h1>
         <input value="<?php echo $row['name'] ?>" class="px-3 py-1 rounded focus:outline-0 shadow-md shadow-gray-300 bg-gray-50" type="text" name="name" placeholder="Product Name">
         <input value="<?php echo $row['amount'] ?>" class="px-3 py-1 rounded focus:outline-0 shadow-md shadow-gray-300 bg-gray-50" type="number" name="amount" placeholder="Amount">
         <input value="<?php echo $row['total_price'] ?>" class="px-3 py-1 rounded focus:outline-0 shadow-md shadow-gray-300 bg-gray-50" type="number" name="total" placeholder="Total Price">

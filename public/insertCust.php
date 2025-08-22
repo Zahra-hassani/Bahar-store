@@ -9,7 +9,7 @@ include "connect.php";
     <title>Customer registration</title>
     <link rel="stylesheet" href="../src/output.css">
 </head>
-<body class="relative h-screen w-full bg-linear-120 from-gray-50 from-50% to-cyan-600 to-50% bg-size-[250%] bg-right animate-bg-change">
+<body class="relative h-screen w-full bg-linear-120 from-gray-50 from-50% to-cyan-600 to-50% bg-size-[100%] bg-right animate-bg-change">
     <h1 class="absolute top-4 left-5 -z-10 text-3xl uppercase font-arial bg-clip-text text-transparent font-black bg-white bg-linear-60 from-white from-50% to-sky-600 to-50% bg-size-[400%] bg-right text-shadow-xs animate-bg-change ">Bahar Store</h1>
     <div class="h-full w-full flex justify-center items-center z-50">
     <div class="h-[65%] w-[55%] bg-cyan-600 flex justify-center items-center rounded shadow-md shadow-gray-500">
@@ -31,5 +31,25 @@ include "connect.php";
     </div>
     </div>
     </div>
+    <?php
+    if($_SERVER["REQUEST_METHOD"]==="POST"){
+        $name= $_POST["name"];
+        $add_pro= $_POST["add_pro"];
+        $add_dis= $_POST["add_dis"];
+        $add_town= $_POST["add_town"];
+        $pro_id= $_POST["product_id"];
+        $amount= $_POST["amount"];
+        $price= $_POST["price"];
+
+        $commond= "INSERT INTO customers(name,address_province,address_district,address_town,product_id,amount,price) VALUES('$name','$add_pro','$add_dis','$add_town','$pro_id','$amount','$price')";
+        if($connect->query($commond)===true){
+            header("location:readCust.php");
+        }
+        else{
+            header("location:readCust.php");
+        }
+    }
+
+?>
 </body>
 </html>

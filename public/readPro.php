@@ -17,7 +17,7 @@ include "connect.php";
         <h1 class="text-3xl font-arial bg-clip-text text-transparent font-black bg-white bg-linear-60 from-white from-50% to-sky-600 to-50% bg-size-[400%] bg-right text-shadow-xs animate-bg-change">BAHAR STORE</h1>
         <ul class="flex justify-between items-center gap-4">
             <li class="font-bold p-3 relative after:content-[''] after:h-[3px] after:w-full after:absolute after:bottom-0 after:left-0 after:rounded-full after:bg-sky-500"><a href="readPro.php" class="0">Products</a></li>
-            <li class="font-bold p-3"><a href="" class="">Customers</a></li>
+            <li class="font-bold p-3"><a href="readCust.php" class="">Customers</a></li>
             <li class="font-bold p-3"><a href="" class="">Lone</a></li>
             <li class="font-bold p-3"><a href="" class="">Employee</a></li>
             <li class="font-bold p-3"><a href="" class="">Yearly expences</a></li>
@@ -38,7 +38,7 @@ include "connect.php";
         echo "<th class='bg-sky-500 text-white font-bold px-3 py-1 rounded-tr-md'>Update</th>";
         echo "</tr>";
         While($row= $selectedData->fetch_assoc()){
-            echo "<tr class='border-b'>";
+            echo "<tr class='odd:bg-gray-50 even:bg-gray-300'>";
             echo "<td class='px-3 py-1 text-center'>".$row['id']."</td>";
             echo "<td class='px-3 py-1 text-center'>".$row['name']."</td>";
             echo "<td class='px-3 py-1 text-center'>".$row['amount']."</td>";
